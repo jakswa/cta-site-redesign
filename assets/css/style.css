@@ -411,7 +411,7 @@ section.alt {
 .hero {
   background:
     linear-gradient(rgba(30, 58, 95, 0.4), rgba(30, 58, 95, 0.5)),
-    url('/assets/images/hero-bg.jpg') center/cover no-repeat;
+    url('../images/hero-bg.jpg') center/cover no-repeat;
   color: #fff;
   padding: var(--spacing-3xl) 0;
   text-align: center;
@@ -714,7 +714,7 @@ section.alt {
 .page-header {
   background:
     linear-gradient(rgba(30, 58, 95, 0.4), rgba(30, 58, 95, 0.5)),
-    url('/assets/images/hero-bg.jpg') center/cover no-repeat;
+    url('../images/hero-bg.jpg') center/cover no-repeat;
   color: #fff;
   padding: var(--spacing-3xl) 0;
   text-align: center;
