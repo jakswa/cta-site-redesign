@@ -1,0 +1,18 @@
+<article class="project-card" data-status="{{ include.project.status | default: 'active' }}">
+  <div class="project-card-header">
+    <h3><a href="{{ include.project.url | relative_url }}">{{ include.project.title }}</a></h3>
+    <span class="status status--{{ include.project.status | default: 'active' }}">{{ include.project.status | default: 'Active' }}</span>
+  </div>
+  {% if include.project.partner %}
+  <p class="project-partner">Partner: {{ include.project.partner }}</p>
+  {% endif %}
+  <p class="project-excerpt">{{ include.project.excerpt | strip_html | truncate: 140 }}</p>
+  {% if include.project.tech %}
+  <ul class="tech-tags">
+    {% for tech in include.project.tech %}
+    <li>{{ tech }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  <a href="{{ include.project.url | relative_url }}" class="project-link">Learn more &rarr;</a>
+</article>

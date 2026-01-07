@@ -1,0 +1,58 @@
+title: Civic Tech Atlanta
+description: Organizing our community to work on civic-minded, social good projects that make metro Atlanta more inclusive, diverse, equitable, and accessible.
+url: "https://www.civictechatlanta.org"
+baseurl: ""
+email: yall@civictechatlanta.org
+
+# Social
+github_username: CivicTechAtlanta
+twitter_username: civictechatl
+mastodon_url: https://mastodon.social/@civictechatl
+linkedin_url: https://www.linkedin.com/company/civic-tech-atlanta
+facebook_url: https://www.facebook.com/civictechatl
+slack_url: https://civictechatl.slack.com
+meetup_url: https://www.meetup.com/civictechatlanta
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:title/
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Exclude
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - overview.md
+  - MVP_PASS1.md
+  - oopsie_plan.md
+  - PROJECTS_SEED_PLAN.md
+  - vendor
+  - .refs
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed

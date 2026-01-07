@@ -1,0 +1,84 @@
+---
+layout: default
+title: Partner With Us
+description: Civic Tech Atlanta partners with nonprofits, government agencies, and community organizations on civic-minded projects. We're volunteers - no charge for our services.
+---
+
+<div class="page-header">
+  <div class="container">
+    <h1>Partner With Us</h1>
+    <p class="subtitle">Let's build something that helps Atlanta together</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="page-content" style="max-width: 700px; margin: 0 auto var(--spacing-2xl);">
+      <p style="font-size: var(--font-size-lg);">
+        Civic Tech Atlanta brings together technologists, designers, and subject matter experts to help community organizations tackle civic challenges. We're an <strong>all-volunteer collective</strong> and do not charge for our services.
+      </p>
+    </div>
+
+    <div class="section-header">
+      <h2>What We Offer</h2>
+    </div>
+    <div class="services-grid">
+      {% for service in site.data.services %}
+      <div class="service-card">
+        <div class="service-card-icon">{{ service.icon }}</div>
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="container">
+    <div class="page-content">
+      <h2>Our Process</h2>
+      <p>We've developed a lightweight process to ensure projects are a good fit and set up for success:</p>
+
+      <ol class="process-steps">
+        <li>
+          <strong>Submit a Proposal</strong><br>
+          Tell us about your organization and the challenge you're facing. Don't worry if you don't have all the answers - we can help you figure things out.
+        </li>
+        <li>
+          <strong>Initial Review</strong><br>
+          We review proposals for alignment with our mission and capacity. We'll reach out with questions or to schedule a conversation.
+        </li>
+        <li>
+          <strong>Discovery</strong><br>
+          We'll dig deeper into stakeholder needs, accessibility requirements, and sustainability planning to make sure we build the right thing.
+        </li>
+        <li>
+          <strong>Project Planning</strong><br>
+          Together we'll develop an initial high-level project plan with clear goals, milestones, and success metrics.
+        </li>
+        <li>
+          <strong>Build Together</strong><br>
+          We present the project to our community at hack nights to recruit volunteers. You'll work alongside us as a partner, not just a client.
+        </li>
+      </ol>
+
+      <div class="callout">
+        <p><strong>Note:</strong> As part of our process, we ask project leads to complete worksheets on Impact Measurement, Racial Equity & Accessibility, and Resourcing & Feasibility. If you don't have all the answers, that's ok! We can help you work through them.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="page-content">
+      <h2>Submit a Project Proposal</h2>
+      <p>Ready to get started? Fill out our proposal form and we'll be in touch.</p>
+
+      <div class="form-wrapper">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeZmX_rSOAq6P66FPpIGjhCkqWYotObgsK0_yePYnvriWOCYQ/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading form...</iframe>
+      </div>
+    </div>
+  </div>
+</section>

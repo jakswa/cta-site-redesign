@@ -1,0 +1,87 @@
+---
+layout: default
+title: About
+description: Learn about Civic Tech Atlanta - our history, our team, and how we operate.
+---
+
+<div class="page-header">
+  <div class="container">
+    <h1>About Civic Tech Atlanta</h1>
+    <p class="subtitle">Building civic technology for metro Atlanta</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="page-content">
+      <h2>Who We Are</h2>
+      <p>Civic Tech Atlanta is a volunteer community of technologists, designers, policy wonks, and engaged citizens working together to improve metro Atlanta through technology. We partner with local nonprofits, government agencies, and community organizations to build digital tools and solve civic challenges.</p>
+
+      <p>We're part of the national civic tech movement - a growing network of people who believe technology can and should serve the public good.</p>
+
+      <h2>What We Believe</h2>
+      <p>Our work is guided by five core principles:</p>
+      <ul>
+        <li><strong>Solve real problems</strong> - We solve problems that real people have, we make sure what we build works for them, and we continuously improve it.</li>
+        <li><strong>Work with, not for, the people we serve</strong> - We start with our users, the people affected by the service, and understand and respect their needs throughout the process.</li>
+        <li><strong>Work lean, iterate quickly</strong> - We get a working minimum viable product in front of users as early as possible and make continuous improvements based on how they use the service.</li>
+        <li><strong>Non-partisan, but not neutral</strong> - We are an alliance of non-partisan groups, but that non-partisanship does not imply neutrality.</li>
+        <li><strong>Default to open</strong> - We work in the open and collaborate with the community to help make programs and services better for everyone.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our Team</h2>
+      <p>Meet the organizers who keep Civic Tech Atlanta running.</p>
+    </div>
+
+    <div class="team-grid">
+      {% for member in site.data.team %}
+      <div class="team-member">
+        <div class="team-photo">
+          {% if member.photo %}
+          <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}">
+          {% endif %}
+        </div>
+        <h3>{{ member.name }}</h3>
+        <p class="role">{{ member.role }}</p>
+      </div>
+      {% endfor %}
+    </div>
+
+    <p style="text-align: center; margin-top: var(--spacing-xl); color: var(--color-text-light);">
+      Want to help organize? <a href="mailto:{{ site.email }}">Get in touch</a>.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="page-content">
+      <h2>Our Projects</h2>
+      <p>We've worked on dozens of projects with partners across metro Atlanta. Browse our <a href="{{ '/projects/' | relative_url }}">project showcase</a> to see current and past work, or check out our <a href="https://github.com/CivicTechAtlanta">GitHub organization</a> for all our open source code.</p>
+
+      <h2>Governance</h2>
+      <p>We operate transparently with clear policies:</p>
+      <ul>
+        <li><a href="{{ '/code-of-conduct/' | relative_url }}">Code of Conduct</a> - Our community standards and anti-harassment policy</li>
+        <li><a href="{{ '/bylaws/' | relative_url }}">By-Laws</a> - How we're organized and make decisions</li>
+        <li><a href="{{ '/conflict-of-interest/' | relative_url }}">Conflict of Interest Policy</a> - How we handle potential conflicts</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="container">
+    <div class="cta-banner">
+      <h3>Join the community</h3>
+      <p>Whether you code, design, write, or just care about Atlanta - there's a place for you here.</p>
+      <a href="{{ '/volunteer/' | relative_url }}" class="btn btn--outline-white btn--large">Get Started</a>
+    </div>
+  </div>
+</section>

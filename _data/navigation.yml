@@ -1,0 +1,17 @@
+main:
+  - title: Projects
+    url: /projects/
+  - title: Partner
+    url: /partner/
+  - title: Volunteer
+    url: /volunteer/
+  - title: Blog
+    url: /blog/
+  - title: About
+    url: /about/
+
+secondary:
+  - title: Civic Tech 101
+    url: /civic-tech-101/
+  - title: Code of Conduct
+    url: /code-of-conduct/

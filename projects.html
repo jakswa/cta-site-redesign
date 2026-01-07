@@ -1,0 +1,63 @@
+---
+layout: default
+title: Projects
+description: See what Civic Tech Atlanta is working on - from active projects seeking contributors to completed work with our community partners.
+---
+
+<div class="page-header">
+  <div class="container">
+    <h1>Our Projects</h1>
+    <p class="subtitle">Building civic technology for metro Atlanta</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="project-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="active">Active</button>
+      <button class="filter-btn" data-filter="complete">Complete</button>
+    </div>
+
+    <div class="project-grid" id="project-grid">
+      {% for project in site.projects %}
+        {% include project-card.html project=project %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="container">
+    <div class="cta-banner" style="background: var(--color-secondary);">
+      <h3>Have a project idea?</h3>
+      <p>We're always looking for new ways to help Atlanta. Submit your proposal and let's build something together.</p>
+      <a href="{{ '/partner/' | relative_url }}" class="btn btn--outline-white btn--large">Propose a Project</a>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const projects = document.querySelectorAll('.project-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      projects.forEach(project => {
+        const status = project.dataset.status;
+        if (filter === 'all' || status === filter) {
+          project.style.display = '';
+        } else {
+          project.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>

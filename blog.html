@@ -1,0 +1,40 @@
+---
+layout: default
+title: Blog
+description: Updates from Civic Tech Atlanta - hack night recaps, project milestones, community announcements, and more.
+---
+
+<div class="page-header">
+  <div class="container">
+    <h1>Blog</h1>
+    <p class="subtitle">Updates from the Civic Tech Atlanta community</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="posts-list">
+      {% for post in site.posts %}
+      <article class="post-card">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <p class="excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+        <a href="{{ post.url | relative_url }}" class="read-more">Read more &rarr;</a>
+      </article>
+      {% endfor %}
+
+      {% if site.posts.size == 0 %}
+      <p style="text-align: center; color: var(--color-text-light);">No posts yet. Check back soon!</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="container">
+    <div style="text-align: center;">
+      <p>Subscribe to our RSS feed to get updates in your reader.</p>
+      <a href="{{ '/feed.xml' | relative_url }}" class="btn btn--outline">RSS Feed</a>
+    </div>
+  </div>
+</section>

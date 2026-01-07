@@ -1,0 +1,129 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>{{ page.hero_title | default: site.title }}</h1>
+      <p class="hero-tagline">{{ page.hero_tagline | default: site.description }}</p>
+      {% if page.hero_schedule %}
+      <div class="hero-event">
+        {{ page.hero_schedule }}
+      </div>
+      {% endif %}
+      <div class="hero-ctas">
+        <a href="{{ site.meetup_url }}" class="btn btn--primary btn--large">Join a Hack Night</a>
+        <a href="{{ '/partner/' | relative_url }}" class="btn btn--outline-white btn--large">Partner With Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="container">
+    <div class="actions-grid">
+      <div class="action-card">
+        <div class="action-card-icon">&#128197;</div>
+        <h3>Attend a Hack Night</h3>
+        <p>Join us monthly. No experience necessary - just bring curiosity and a willingness to help.</p>
+        <a href="{{ site.meetup_url }}" class="btn btn--primary">See Events</a>
+      </div>
+      <div class="action-card">
+        <div class="action-card-icon">&#128736;</div>
+        <h3>Browse Projects</h3>
+        <p>See what we're working on and find a project that matches your skills and interests.</p>
+        <a href="{{ '/projects/' | relative_url }}" class="btn btn--primary">View Projects</a>
+      </div>
+      <div class="action-card">
+        <div class="action-card-icon">&#129309;</div>
+        <h3>Partner With Us</h3>
+        <p>Have a civic challenge? We partner with nonprofits and governments on social good projects.</p>
+        <a href="{{ '/partner/' | relative_url }}" class="btn btn--primary">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>Our Principles</h2>
+      <p>These values guide everything we do.</p>
+    </div>
+    <div class="principles-grid">
+      <div class="principle">
+        <h3>Solve real problems</h3>
+        <p>We solve problems that real people have, we make sure what we build works for them, and we continuously improve it.</p>
+      </div>
+      <div class="principle">
+        <h3>Work with, not for, the people we serve</h3>
+        <p>We start with our users, the people affected by the service, and understand and respect their needs throughout the process.</p>
+      </div>
+      <div class="principle">
+        <h3>Work lean, iterate quickly</h3>
+        <p>We get a working minimum viable product in front of users as early as possible and make continuous improvements based on how they use the service.</p>
+      </div>
+      <div class="principle">
+        <h3>Non-partisan, but not neutral</h3>
+        <p>We are an alliance of non-partisan groups, but that non-partisanship does not imply neutrality.</p>
+      </div>
+      <div class="principle">
+        <h3>Default to open</h3>
+        <p>We work in the open and collaborate with the community to help make programs and services better for everyone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% assign featured_projects = site.projects | where: "featured", true | limit: 3 %}
+{% if featured_projects.size > 0 %}
+<section class="alt">
+  <div class="container">
+    <div class="section-header">
+      <h2>Featured Projects</h2>
+      <p>Current work making metro Atlanta more inclusive, diverse, equitable, and accessible.</p>
+    </div>
+    <div class="project-grid">
+      {% for project in featured_projects %}
+        {% include project-card.html project=project %}
+      {% endfor %}
+    </div>
+    <div style="text-align: center; margin-top: var(--spacing-xl);">
+      <a href="{{ '/projects/' | relative_url }}" class="btn btn--outline">View All Projects</a>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% assign past_projects = site.projects | where: "status", "complete" | limit: 3 %}
+{% if past_projects.size > 0 %}
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>Past Projects</h2>
+      <p>Completed work that's making a difference in our community.</p>
+    </div>
+    <div class="project-grid">
+      {% for project in past_projects %}
+        {% include project-card.html project=project %}
+      {% endfor %}
+    </div>
+    <div style="text-align: center; margin-top: var(--spacing-xl);">
+      <a href="{{ '/projects/' | relative_url }}" class="btn btn--outline">View All Projects</a>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section>
+  <div class="container">
+    <div class="cta-banner">
+      <h3>Ready to make an impact?</h3>
+      <p>Whether you code, design, write, or just care about Atlanta - there's a place for you here.</p>
+      <a href="{{ '/volunteer/' | relative_url }}" class="btn btn--outline-white btn--large">Get Started</a>
+    </div>
+  </div>
+</section>
+
+{{ content }}

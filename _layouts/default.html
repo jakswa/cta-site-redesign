@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include header.html %}
+
+  <main>
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navList = document.querySelector('.nav-list');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        navList.classList.toggle('is-open');
+        navToggle.setAttribute('aria-expanded',
+          navToggle.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
+        );
+      });
+    }
+  </script>
+</body>
+</html>

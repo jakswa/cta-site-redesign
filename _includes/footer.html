@@ -1,0 +1,51 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h4>Get Involved</h4>
+        <ul>
+          <li><a href="{{ site.meetup_url }}">Join a Hack Night</a></li>
+          <li><a href="{{ '/volunteer/' | relative_url }}">Volunteer</a></li>
+          <li><a href="{{ '/partner/' | relative_url }}">Partner With Us</a></li>
+          <li><a href="https://github.com/{{ site.github_username }}">Contribute on GitHub</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Learn More</h4>
+        <ul>
+          <li><a href="{{ '/civic-tech-101/' | relative_url }}">Civic Tech 101</a></li>
+          <li><a href="{{ '/projects/' | relative_url }}">Our Projects</a></li>
+          <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+          <li><a href="{{ '/about/' | relative_url }}">About Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Governance</h4>
+        <ul>
+          <li><a href="{{ '/code-of-conduct/' | relative_url }}">Code of Conduct</a></li>
+          <li><a href="{{ '/bylaws/' | relative_url }}">By-Laws</a></li>
+          <li><a href="{{ '/conflict-of-interest/' | relative_url }}">Conflict of Interest</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <ul class="social-links">
+          <li><a href="{{ site.slack_url }}">Slack</a></li>
+          <li><a href="{{ site.mastodon_url }}" rel="me">Mastodon</a></li>
+          <li><a href="{{ site.linkedin_url }}">LinkedIn</a></li>
+          <li><a href="{{ site.facebook_url }}">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </p>
+      <p class="copyright">Civic Tech Atlanta. Made with care in Atlanta, GA.</p>
+    </div>
+  </div>
+</footer>
