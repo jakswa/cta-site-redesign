@@ -16,6 +16,8 @@ published: true
 - [ ] Edit or replace this draft post
 - [x] `index.md` - Changed to static schedule ("every 2nd & 4th Monday")
 - [x] `bylaws.md` - Complete (all 9 articles)
+- [x] `_config.yml` - Set `baseurl: "/cta-site-redesign"` for GitHub Pages demo
+- [ ] Reset `baseurl: ""` when deploying to civictechatlanta.org root
 
 ## GitHub Issues Addressed
 
