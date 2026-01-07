@@ -51,9 +51,9 @@
   --radius-lg: 12px;
   --radius-full: 9999px;
 
-  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
-  --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
-  --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
 
   --max-width: 1200px;
   --max-width-narrow: 800px;
@@ -65,7 +65,9 @@
 /* --------------------------------------------------------------------------
    Reset & Base
    -------------------------------------------------------------------------- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -84,7 +86,8 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img, video {
+img,
+video {
   max-width: 100%;
   height: auto;
   display: block;
@@ -106,22 +109,39 @@ a:focus-visible {
   border-radius: var(--radius-sm);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0 0 var(--spacing-md);
   line-height: var(--line-height-tight);
   font-weight: 600;
 }
 
-h1 { font-size: var(--font-size-4xl); }
-h2 { font-size: var(--font-size-3xl); }
-h3 { font-size: var(--font-size-2xl); }
-h4 { font-size: var(--font-size-xl); }
+h1 {
+  font-size: var(--font-size-4xl);
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+}
+
+h4 {
+  font-size: var(--font-size-xl);
+}
 
 p {
   margin: 0 0 var(--spacing-md);
 }
 
-ul, ol {
+ul,
+ol {
   margin: 0 0 var(--spacing-md);
   padding-left: var(--spacing-xl);
 }
@@ -277,7 +297,7 @@ section.alt {
    -------------------------------------------------------------------------- */
 .site-footer {
   background: var(--color-secondary);
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
   padding: var(--spacing-3xl) 0 var(--spacing-xl);
 }
 
@@ -306,7 +326,7 @@ section.alt {
 }
 
 .footer-section a {
-  color: rgba(255,255,255,0.75);
+  color: rgba(255, 255, 255, 0.75);
   font-size: var(--font-size-sm);
 }
 
@@ -317,7 +337,7 @@ section.alt {
 .footer-bottom {
   margin-top: var(--spacing-2xl);
   padding-top: var(--spacing-xl);
-  border-top: 1px solid rgba(255,255,255,0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   text-align: center;
 }
 
@@ -330,7 +350,7 @@ section.alt {
 }
 
 .copyright {
-  color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
   font-size: var(--font-size-sm);
   margin-top: var(--spacing-sm);
 }
@@ -401,7 +421,7 @@ section.alt {
 .btn--outline-white {
   background: transparent;
   color: #fff;
-  border-color: rgba(255,255,255,0.5);
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 .btn--outline-white:hover {
@@ -448,7 +468,7 @@ section.alt {
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-sm);
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
   padding: var(--spacing-sm) var(--spacing-lg);
   border-radius: var(--radius-full);
   font-size: var(--font-size-sm);
@@ -1204,6 +1224,14 @@ section.alt {
   margin-bottom: 0.35em;
 }
 
+.post-article-body li input[type="checkbox"] {
+  margin-right: 0.65em;
+}
+
+.post-article-body li:has(input[type="checkbox"]) code {
+  padding-left: 0;
+}
+
 .post-article-body li strong {
   font-weight: 600;
 }
@@ -1237,7 +1265,7 @@ section.alt {
 
 .post-article-body code {
   font-family: 'SF Mono', Monaco, 'Courier New', monospace;
-  font-size: 0.9em;
+  font-size: 0.85em;
   background: var(--color-background-alt);
   padding: 0.15em 0.4em;
   border-radius: var(--radius-sm);
