@@ -25,9 +25,14 @@ layout: default
 
     <footer class="project-article-footer">
       <a href="{{ '/projects/' | relative_url }}" class="back-link">&larr; Back to all projects</a>
-      {% if page.github %}
-      <a href="{{ page.github }}" class="btn btn--secondary">View on GitHub &rarr;</a>
-      {% endif %}
+      <div class="project-article-actions">
+        {% if page.slack_channel %}
+        <span class="slack-channel">Slack: {{ page.slack_channel }}</span>
+        {% endif %}
+        {% if page.github %}
+        <a href="{{ page.github }}" class="btn btn--secondary">View on GitHub &rarr;</a>
+        {% endif %}
+      </div>
     </footer>
   </article>
 </div>

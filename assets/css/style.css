@@ -938,6 +938,17 @@ section.alt {
   color: var(--color-primary);
 }
 
+.project-article-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.slack-channel {
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+}
+
 @media (max-width: 768px) {
   .project-page {
     padding: var(--spacing-lg) var(--spacing-sm);
