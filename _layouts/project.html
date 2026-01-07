@@ -2,36 +2,32 @@
 layout: default
 ---
 
-<div class="page-header">
-  <div class="container">
-    <span class="status status--{{ page.status | default: 'active' }}">{{ page.status | default: 'Active' }}</span>
-    <h1>{{ page.title }}</h1>
-    {% if page.partner %}
-    <p class="subtitle">Partner: {{ page.partner }}</p>
-    {% endif %}
-  </div>
-</div>
+<div class="project-page">
+  <article class="project-article">
+    <header class="project-article-header{% if page.image %} project-article-header--has-image{% endif %}"{% if page.image %} style="background-image: linear-gradient(rgba(30, 58, 95, 0.75), rgba(30, 58, 95, 0.75)), url('{{ page.image | relative_url }}');"{% endif %}>
+      <span class="status status--{{ page.status | default: 'active' }}">{{ page.status | default: 'Active' }}</span>
+      <h1>{{ page.title }}</h1>
+      {% if page.partner %}
+      <p class="project-partner">Partner: {{ page.partner }}</p>
+      {% endif %}
+      {% if page.tech %}
+      <ul class="tech-tags tech-tags--header">
+        {% for tech in page.tech %}
+        <li>{{ tech }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </header>
 
-<div class="page">
-  <div class="page-content">
-    {% if page.tech %}
-    <ul class="tech-tags" style="margin-bottom: var(--spacing-xl);">
-      {% for tech in page.tech %}
-      <li>{{ tech }}</li>
-      {% endfor %}
-    </ul>
-    {% endif %}
+    <div class="project-article-body">
+      {{ content }}
+    </div>
 
-    {{ content }}
-
-    {% if page.github %}
-    <div style="margin-top: var(--spacing-2xl);">
+    <footer class="project-article-footer">
+      <a href="{{ '/projects/' | relative_url }}" class="back-link">&larr; Back to all projects</a>
+      {% if page.github %}
       <a href="{{ page.github }}" class="btn btn--secondary">View on GitHub &rarr;</a>
-    </div>
-    {% endif %}
-
-    <div class="post-footer">
-      <a href="{{ '/projects/' | relative_url }}">&larr; Back to all projects</a>
-    </div>
-  </div>
+      {% endif %}
+    </footer>
+  </article>
 </div>
