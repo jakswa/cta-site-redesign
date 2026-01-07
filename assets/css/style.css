@@ -200,6 +200,16 @@ section.alt {
   text-decoration: none;
 }
 
+.logo-image {
+  height: 40px;
+  width: auto;
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+}
+
 .nav-list {
   display: flex;
   list-style: none;

@@ -2,7 +2,7 @@
 title: "Website Redesign Status"
 description: "Tracking progress on the Civic Tech Atlanta website redesign. Delete this post before launch."
 date: 2026-01-06
-author: Civic Tech Atlanta
+author: Claude and Jake
 image: /assets/images/hero-bg.jpg
 published: true
 ---
