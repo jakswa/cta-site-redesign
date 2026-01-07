@@ -305,6 +305,7 @@ section.alt {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--spacing-2xl);
+  text-align: center;
 }
 
 .footer-section h4 {
