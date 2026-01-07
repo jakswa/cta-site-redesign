@@ -562,11 +562,45 @@ section.alt {
   border-radius: var(--radius-lg);
   padding: var(--spacing-xl);
   transition: box-shadow var(--transition), transform var(--transition);
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
   box-shadow: var(--shadow-lg);
   transform: translateY(-2px);
+}
+
+.project-card--has-image {
+  padding: 0;
+  overflow: hidden;
+}
+
+.project-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.project-card--has-image .project-card-body {
+  padding: var(--spacing-lg);
+}
+
+.project-card-image {
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.project-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition);
+}
+
+.project-card:hover .project-card-image img {
+  transform: scale(1.05);
 }
 
 .project-card-header {
@@ -621,6 +655,7 @@ section.alt {
   color: var(--color-text-light);
   font-size: var(--font-size-sm);
   margin-bottom: var(--spacing-md);
+  flex: 1;
 }
 
 .tech-tags {
