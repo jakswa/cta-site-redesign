@@ -12,7 +12,7 @@ published: true
 ## Review Checklist
 
 - [ ] `_data/team.yml` - Add real organizers
-- [x] `_projects/*.md` - Add real projects (8 added)
+- [x] `_projects/*.md` - Real projects from CivicTechAtlanta GitHub + past projects with images
 - [ ] Edit or replace this draft post
 - [x] `index.md` - Changed to static schedule ("every 2nd & 4th Monday")
 - [x] `bylaws.md` - Complete (all 9 articles)
